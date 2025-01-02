@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color, #2b2b2b);
+    color: var(--text-color, #fff);
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .sidebar {
+    width: 250px;
+    background-color: #1f1f1f;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 10px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  }
+
+  .sidebar h2 {
+    color: #00ff84;
+    padding: 16px;
+  }
+
+  .main {
+    margin-left: 260px;
+    padding: 20px;
+  }
+
+  .topbar {
+    background-color: #1f1f1f;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .search-bar input {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+  }
+
+  .search-bar input:focus {
+    box-shadow: 0 0 5px #00ff84;
+  }
+
+  .toggle-button, .upload-button {
+    background-color: #00ff84;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  .toggle-button:hover, .upload-button:hover {
+    background-color: #00d96e;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+    padding: 16px;
+    background-color: var(--background-color, #2b2b2b);
+  }
+
+  .gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+  }
+
+  .gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .gallery .caption {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+
+  .modal {
+    display: none;
+    position: fixed;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    flex-direction: column;
+    
+  }
+
+  .modal img {
+    max-width: 80%;
+    max-height: 90%;
+    border-radius: 10px;
+    margin: 1rem;
+  }
+
+  .modal .controls {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-top: 10px;
+   
+  }
+
+  .modal .close,
+   .modal .prev,
+    .modal .next {
+    background-color: #00ff84;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  .modal .close:hover,
+  
+  .modal .prev:hover,
+   .modal .next:hover {
+    background-color: #00d96e;
+  }

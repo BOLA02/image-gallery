@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enhanced Image Gallery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styl.css">
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Image Gallery</h2>
+  </div>
+
+  <div class="main">
+
+    <div class="topbar">
+      <div class="search-bar">
+        <input id="searchInput" type="text" placeholder="Search images...">
+      </div>
+
+
+      <button id="uploadImage" class="upload-button">Upload Image</button>
+
+      
+      <button id="toggleTheme" class="toggle-button">Toggle Theme</button>
+    </div>
+
+    <div class="gallery" id="gallery">
+      <div class="image-container">
+        <img src="images/-cp9bth.jpg" alt="Nature Image 1" loading="lazy">
+        <div class="caption"> Image 1</div>
+      </div>
+      <div class="image-container">
+        <img src="images/-k9ddxb.jpg" alt="Architecture Image 1" loading="lazy">
+        <div class="caption">Image 1</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="imageModal">
+    <span class="close" id="closeModal">close</span>
+    <img id="modalImage" src="" alt="images">
+    <div class="controls">
+      <button class="prev" id="prevImage">Previous</button>
+      <button class="next" id="nextImage">Next</button>
+    </div>
+  </div>
+
+  <input type="file" id="fileInput" accept="image/*" style="display: none;">
+
+ <script src="js/script.js"></script>
+</body>
+</html>
